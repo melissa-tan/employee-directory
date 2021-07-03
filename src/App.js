@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import Table from './components/Table';
+import Header from './components/Header';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [employees, setEmployees] = useState([]);
+
+    useEffect(() => {
+        async function fetchData() {
+            const request = await axios.get('https://randomuser.me/api/?results=20');
+            setEmployees(request.data.results);
+        }
+        fetchData();
+    }, [])
+
+    return (
+        <>
+            <Header />
+            <Table employees={employees}/>
+        </>
+    );
 }
 
 export default App;
