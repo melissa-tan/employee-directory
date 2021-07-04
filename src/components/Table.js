@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFilter } from '@fortawesome/free-solid-svg-icons'
 
 export default function Table({ employees }) {
+
     return (
         <div>
             <table>
                 <thead>
                     <tr>
                         <th>Image</th>
-                        <th>First</th>
-                        <th>Last</th>
+                        <th onClick={(event) => console.log(event)} className={'hover'}>First&nbsp;
+                            <FontAwesomeIcon icon={ faFilter } /></th>
+                        <th onClick={(event) => console.log(event)} className={'hover'}>Last&nbsp;
+                            <FontAwesomeIcon icon={ faFilter } /></th>
                         <th>Email</th>
                         <th>Phone</th>
                         <th>Location</th>

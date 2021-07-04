@@ -6,6 +6,7 @@ import Header from './components/Header';
 
 function App() {
     const [employees, setEmployees] = useState([]);
+    const [order, setOrder] = useState('ASC')
 
     useEffect(() => {
         async function fetchData() {
