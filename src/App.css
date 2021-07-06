@@ -1,0 +1,55 @@
+h1{
+    text-align: center;
+    margin: 0 30px;
+    padding: 30px;
+    background-color: rgb(101, 167, 253);
+}
+
+input{
+    margin: 10px 30px;
+    width: 15%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.table-container{
+    margin: 10px 30px;
+}
+
+table{
+    width: 100%;
+}
+
+thead{
+    background-color: rgb(161, 140, 255);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+tr{
+    text-align: center;
+    background-color: rgb(191, 176, 255);
+}
+tr.odd {
+    background-color: rgb(217, 209, 255);
+}
+
+tbody tr:hover{
+    background-color: rgb(165, 165, 165);
+}
+
+.photo{
+    border: 1px solid rgb(49, 49, 49);
+    border-radius: 50%;
+}
+
+.no-results{
+    background-color: rgb(217, 209, 255);
+    color: red;
+    font-size: 3rem;
+    padding:20px;
+}

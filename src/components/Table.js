@@ -35,20 +35,20 @@ export default function Table({ employees }) {
 
 
     return (
-        <div>
+        <div className={'table-container'}>
             <table>
                 <thead>
                     <tr>
-                        <th>Image</th>
-                        <th onClick={() => sort('name.first')} className={'hover'}>First&nbsp;
+                        <th>Photo</th>
+                        <th onClick={() => sort('name.first')}>First&nbsp;
                             <FontAwesomeIcon icon={faSort} /></th>
-                        <th onClick={() => sort('name.last')} className={'hover'}>Last&nbsp;
+                        <th onClick={() => sort('name.last')}>Last&nbsp;
                             <FontAwesomeIcon icon={faSort} /></th>
-                        <th onClick={() => sort('email')} className={'hover'}>Email&nbsp;
+                        <th onClick={() => sort('email')}>Email&nbsp;
                             <FontAwesomeIcon icon={faSort} /></th>
-                        <th onClick={() => sort('phone')} className={'hover'}>Phone&nbsp;
+                        <th onClick={() => sort('phone')}>Phone&nbsp;
                             <FontAwesomeIcon icon={faSort} /></th>
-                        <th onClick={() => sort('location.country')} className={'hover'}>Location&nbsp;
+                        <th onClick={() => sort('location.country')}>Location&nbsp;
                             <FontAwesomeIcon icon={faSort} /></th>
                     </tr>
                 </thead>
@@ -57,7 +57,7 @@ export default function Table({ employees }) {
                         employees.map((employee, index) => (
                             <tr key={employee.login.uuid} className={index % 2 === 0 ? 'odd' : 'even'}>
                                 <td>
-                                    <img alt={employee.name.last} src={employee.picture.medium} />
+                                    <img className={'photo'} alt={employee.name.last} src={employee.picture.medium} />
                                 </td>
                                 <td>{employee.name.first}</td>
                                 <td>{employee.name.last}</td>
@@ -68,7 +68,7 @@ export default function Table({ employees }) {
                         ))
                     ) : (
                         <tr>
-                            <td colSpan={6} className={'noResults'}>
+                            <td colSpan={6} className={'no-results'}>
                                 No Results Found!
                             </td>
                         </tr>
