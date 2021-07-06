@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSort } from '@fortawesome/free-solid-svg-icons'
 
@@ -31,6 +31,8 @@ export default function Table({ employees }) {
         setSortedEmployees(updateSort);
         setSortState(!sortState);
     };
+
+
 
     return (
         <div>
