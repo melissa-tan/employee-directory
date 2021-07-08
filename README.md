@@ -32,7 +32,7 @@ Employee Directory is a react app that allows the user to view all employees, fi
     ```
 
 ## Usage
-![GIF of Employee Directory](./public/images/public\images\react-app.gif)
+![GIF of Employee Directory](./public/images/react-app.gif)
 
 
 ## Contribution
