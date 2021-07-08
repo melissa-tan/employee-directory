@@ -2,7 +2,7 @@
 
 ![license-badge](https://img.shields.io/badge/license-MIT-yellow)
 
-[http://fierce-shore-29397.herokuapp.com/](http://fierce-shore-29397.herokuapp.com/)
+[https://fierce-shore-29397.herokuapp.com/](https://fierce-shore-29397.herokuapp.com/)
 
 ## Description
 Employee Directory is a react app that allows the user to view all employees, filter by all columns, and search by employee name. The employees are generated using the [Random User API](https://randomuser.me/).
